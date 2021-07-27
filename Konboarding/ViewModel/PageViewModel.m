@@ -18,9 +18,9 @@ NSString *imageName;
 {
     self = [super init];
     if (self) {
-        title = page.title;
-        text = page.text;
-        imageName = page.imageName;
+        title = newPage.title;
+        text = newPage.text;
+        imageName = newPage.imageName;
     }
     return self;
 }

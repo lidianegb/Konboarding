@@ -9,10 +9,11 @@
 
 @implementation PageViewController
 
--(instancetype)initWithTitle:(NSString *)title text:(NSString *)text imageName:(NSString *)imageName {
+
+-(instancetype)initWithPage:(PageViewModel *)pageViewModel {
     self = [super init];
     if (self) {
-        [self setupSubViews:title :text :imageName];
+        [self setupSubViews:pageViewModel];
     }
     return self;
 }
@@ -39,9 +40,9 @@
     self.textLabel.textColor = textColor;
 }
 
--(void) setupSubViews: (NSString*) title : (NSString*) text : (NSString*) imageName {
+-(void) setupSubViews: (PageViewModel*) page {
     self.titleLabel = [UILabel new];
-    self.titleLabel.text = title;
+    self.titleLabel.text = page.title;
     self.textLabel.numberOfLines = 0;
     self.titleLabel.textAlignment = NSTextAlignmentCenter;
     [self.titleLabel setFont: [UIFont boldSystemFontOfSize:(32)]];
@@ -50,14 +51,14 @@
     
     
     self.textLabel = [UILabel new];
-    self.textLabel.text = text;
+    self.textLabel.text = page.text;
     self.textLabel.numberOfLines = 0;
     self.textLabel.textAlignment = NSTextAlignmentCenter;
     self.textLabel.font = [UIFont systemFontOfSize:(17)];
     self.textLabel.textColor = [UIColor blackColor];
    
     
-    UIImage *newImage = [UIImage imageNamed:imageName];
+    UIImage *newImage = [UIImage imageNamed:page.imageName];
     self.imageView = [[UIImageView alloc] initWithImage:newImage];
     self.imageView.contentMode = UIViewContentModeScaleAspectFit;
 }
