@@ -9,7 +9,6 @@
 
 @implementation PageViewModel
 
-Page *page;
 NSString *title;
 NSString *text;
 NSString *imageName;
