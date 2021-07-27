@@ -15,20 +15,54 @@ PageViewModel *viewModel;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor redColor];
+    self.view.backgroundColor = UIColor.whiteColor;
+   
+    self.onboarding.dataSource = self;
+    self.onboarding.delegate = self;
+    [self.view addSubview: self.onboarding];
     
 }
 
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.onboarding = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStylePageCurl navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options: nil];
+    }
+    return self;
 }
-*/
+
+- (nullable UIViewController *)pageViewController:(nonnull UIPageViewController *)pageViewController viewControllerAfterViewController:(nonnull UIViewController *)viewController {
+    
+        Page *page = [[Page alloc] initWithTitle:@"um titulo aqui" text:@"um texto aqui um texto aqui um texto aqui um texto aqui um texto aqui aqui um texto aqui um texto aqui aqui um texto aqui um texto aqui aqui um texto aqui um texto aqui aqui um texto aqui um texto aqui aqui um texto aqui um texto aqui" imageName:@"imageTest"];
+    
+        PageViewModel *pageViewModel = [[PageViewModel alloc] initWithPage:page];
+    
+        PageViewController * konboardingViewController = [[PageViewController alloc] initWithPage:pageViewModel];
+    
+        konboardingViewController.backgroundColor = [UIColor blueColor];
+        konboardingViewController.titleColor = [UIColor whiteColor];
+        konboardingViewController.textColor = [UIColor whiteColor];
+    
+    return konboardingViewController;
+        
+}
+
+- (nullable UIViewController *)pageViewController:(nonnull UIPageViewController *)pageViewController viewControllerBeforeViewController:(nonnull UIViewController *)viewController {
+    
+        Page *page = [[Page alloc] initWithTitle:@"um titulo aqui" text:@"um texto aqui um texto aqui um texto aqui um texto aqui um texto aqui aqui um texto aqui um texto aqui aqui um texto aqui um texto aqui aqui um texto aqui um texto aqui aqui um texto aqui um texto aqui aqui um texto aqui um texto aqui" imageName:@"imageTest"];
+    
+        PageViewModel *pageViewModel = [[PageViewModel alloc] initWithPage:page];
+    
+        PageViewController * konboardingViewController = [[PageViewController alloc] initWithPage:pageViewModel];
+    
+        konboardingViewController.backgroundColor = [UIColor redColor];
+        konboardingViewController.titleColor = [UIColor whiteColor];
+        konboardingViewController.textColor = [UIColor whiteColor];
+    
+    return konboardingViewController;
+        
+}
+
 
 @end
