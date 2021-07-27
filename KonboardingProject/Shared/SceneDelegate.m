@@ -19,8 +19,13 @@
     
     KonboardingViewController * konboardingViewController = [KonboardingViewController new];
     UIWindowScene * windowScene = [[UIWindowScene alloc] initWithSession:session connectionOptions:connectionOptions];
-    
-//    PageViewController * konboardingViewController = [[PageViewController alloc] initWithTitle:@"um titulo aqui" text:@"um texto aqui um texto aqui um texto aqui um texto aqui um texto aqui aqui um texto aqui um texto aqui aqui um texto aqui um texto aqui aqui um texto aqui um texto aqui aqui um texto aqui um texto aqui aqui um texto aqui um texto aqui" imageName:@"imageTest"];
+//    
+//    Page *page = [[Page alloc] initWithTitle:@"um titulo aqui" text:@"um texto aqui um texto aqui um texto aqui um texto aqui um texto aqui aqui um texto aqui um texto aqui aqui um texto aqui um texto aqui aqui um texto aqui um texto aqui aqui um texto aqui um texto aqui aqui um texto aqui um texto aqui" imageName:@"imageTest"];
+//
+//    PageViewModel *pageViewModel = [[PageViewModel alloc] initWithPage:page];
+//  
+//    PageViewController * konboardingViewController = [[PageViewController alloc] initWithPage:pageViewModel];
+//   
 //    konboardingViewController.backgroundColor = [UIColor blueColor];
 //    konboardingViewController.titleColor = [UIColor whiteColor];
 //    konboardingViewController.textColor = [UIColor whiteColor];

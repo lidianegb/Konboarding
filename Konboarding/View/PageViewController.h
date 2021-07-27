@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) UIColor *titleColor;
 @property (nonatomic) UIColor *textColor;
 
--(instancetype) initWithTitle: (NSString*) title text: (NSString*) text imageName:(NSString *)imageName;
+-(instancetype) initWithPage: (PageViewModel*) pageViewModel;
 
 @end
 
