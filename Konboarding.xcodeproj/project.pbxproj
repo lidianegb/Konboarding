@@ -21,12 +21,6 @@
 		0BE8655526A8656F00F69F2D /* KonboardingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BE8655326A8656F00F69F2D /* KonboardingViewController.m */; };
 		0BE8655926A8687B00F69F2D /* PageViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BE8655726A8687B00F69F2D /* PageViewController.h */; };
 		0BE8655A26A8687B00F69F2D /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BE8655826A8687B00F69F2D /* PageViewController.m */; };
-		0BE8655C26A86D3200F69F2D /* Page.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BE8655B26A86D3200F69F2D /* Page.m */; };
-		0BE8655E26A9A75F00F69F2D /* Page.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BE8655D26A9A75F00F69F2D /* Page.h */; };
-		0BE8656226AAF33800F69F2D /* KonboardingViewModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BE8656026AAF33800F69F2D /* KonboardingViewModel.h */; };
-		0BE8656326AAF33800F69F2D /* KonboardingViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BE8656126AAF33800F69F2D /* KonboardingViewModel.m */; };
-		AF1FE7D426AEF41C00EA99D0 /* PageViewModel.h in Headers */ = {isa = PBXBuildFile; fileRef = AF1FE7D226AEF41C00EA99D0 /* PageViewModel.h */; };
-		AF1FE7D526AEF41C00EA99D0 /* PageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1FE7D326AEF41C00EA99D0 /* PageViewModel.m */; };
 		AF9863F326B0EF9700159A30 /* KonboardingViewControllerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = AF9863F226B0EF9700159A30 /* KonboardingViewControllerDelegate.h */; };
 /* End PBXBuildFile section */
 
@@ -74,12 +68,6 @@
 		0BE8655326A8656F00F69F2D /* KonboardingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KonboardingViewController.m; sourceTree = "<group>"; };
 		0BE8655726A8687B00F69F2D /* PageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PageViewController.h; sourceTree = "<group>"; };
 		0BE8655826A8687B00F69F2D /* PageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
-		0BE8655B26A86D3200F69F2D /* Page.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Page.m; sourceTree = "<group>"; };
-		0BE8655D26A9A75F00F69F2D /* Page.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Page.h; sourceTree = "<group>"; };
-		0BE8656026AAF33800F69F2D /* KonboardingViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KonboardingViewModel.h; sourceTree = "<group>"; };
-		0BE8656126AAF33800F69F2D /* KonboardingViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KonboardingViewModel.m; sourceTree = "<group>"; };
-		AF1FE7D226AEF41C00EA99D0 /* PageViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PageViewModel.h; sourceTree = "<group>"; };
-		AF1FE7D326AEF41C00EA99D0 /* PageViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PageViewModel.m; sourceTree = "<group>"; };
 		AF9863F226B0EF9700159A30 /* KonboardingViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KonboardingViewControllerDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,7 +119,6 @@
 		0BE8652526A85D6200F69F2D /* Konboarding */ = {
 			isa = PBXGroup;
 			children = (
-				0BE8655F26AAF2D100F69F2D /* ViewModel */,
 				0BE8655626A865B300F69F2D /* Shared */,
 				0BE8655126A863FA00F69F2D /* Model */,
 				0BE8655026A863F000F69F2D /* View */,
@@ -203,8 +190,6 @@
 		0BE8655126A863FA00F69F2D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0BE8655D26A9A75F00F69F2D /* Page.h */,
-				0BE8655B26A86D3200F69F2D /* Page.m */,
 				AF9863F226B0EF9700159A30 /* KonboardingViewControllerDelegate.h */,
 			);
 			path = Model;
@@ -219,17 +204,6 @@
 			path = Shared;
 			sourceTree = "<group>";
 		};
-		0BE8655F26AAF2D100F69F2D /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				0BE8656026AAF33800F69F2D /* KonboardingViewModel.h */,
-				0BE8656126AAF33800F69F2D /* KonboardingViewModel.m */,
-				AF1FE7D226AEF41C00EA99D0 /* PageViewModel.h */,
-				AF1FE7D326AEF41C00EA99D0 /* PageViewModel.m */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -238,11 +212,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BE8655926A8687B00F69F2D /* PageViewController.h in Headers */,
-				0BE8656226AAF33800F69F2D /* KonboardingViewModel.h in Headers */,
-				AF1FE7D426AEF41C00EA99D0 /* PageViewModel.h in Headers */,
 				AF9863F326B0EF9700159A30 /* KonboardingViewControllerDelegate.h in Headers */,
 				0BE8655426A8656F00F69F2D /* KonboardingViewController.h in Headers */,
-				0BE8655E26A9A75F00F69F2D /* Page.h in Headers */,
 				0BE8652826A85D6200F69F2D /* Konboarding.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,10 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BE8655526A8656F00F69F2D /* KonboardingViewController.m in Sources */,
-				AF1FE7D526AEF41C00EA99D0 /* PageViewModel.m in Sources */,
 				0BE8655A26A8687B00F69F2D /* PageViewController.m in Sources */,
-				0BE8655C26A86D3200F69F2D /* Page.m in Sources */,
-				0BE8656326AAF33800F69F2D /* KonboardingViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

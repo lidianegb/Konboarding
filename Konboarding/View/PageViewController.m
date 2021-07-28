@@ -9,11 +9,10 @@
 
 @implementation PageViewController
 
-
--(instancetype)initWithPage:(PageViewModel *)pageViewModel {
+- (instancetype)initWithTitle:(NSString *)title text:(NSString *)text imageName:(NSString *)imageName {
     self = [super init];
     if (self) {
-        [self setupSubViews:pageViewModel];
+        [self setupSubViews:title :text :imageName];
     }
     return self;
 }
@@ -41,9 +40,21 @@
     self.textLabel.textColor = textColor;
 }
 
--(void) setupSubViews: (PageViewModel*) page {
+-(void) setButtonNextColor:(UIColor *)buttonNextColor {
+    self.buttonNext.tintColor = buttonNextColor;
+}
+
+-(void) setButtonPreviewColor:(UIColor *)buttonPreviewColor {
+    self.buttonPreview.tintColor = buttonPreviewColor;
+}
+
+-(void) setButtonCloseColor:(UIColor *)buttonCloseColor {
+    self.buttonClose.tintColor = buttonCloseColor;
+}
+
+-(void) setupSubViews: (NSString*) titleText : (NSString*) text : (NSString*) imageName {
     self.titleLabel = [UILabel new];
-    self.titleLabel.text = page.title;
+    self.titleLabel.text = titleText;
     self.textLabel.numberOfLines = 0;
     self.titleLabel.textAlignment = NSTextAlignmentCenter;
     [self.titleLabel setFont: [UIFont boldSystemFontOfSize:(32)]];
@@ -52,14 +63,14 @@
     
     
     self.textLabel = [UILabel new];
-    self.textLabel.text = page.text;
+    self.textLabel.text = text;
     self.textLabel.numberOfLines = 0;
     self.textLabel.textAlignment = NSTextAlignmentCenter;
     self.textLabel.font = [UIFont systemFontOfSize:(17)];
     self.textLabel.textColor = [UIColor blackColor];
    
     
-    UIImage *newImage = [UIImage imageNamed:page.imageName];
+    UIImage *newImage = [UIImage imageNamed:imageName];
     self.imageView = [[UIImageView alloc] initWithImage:newImage];
     self.imageView.contentMode = UIViewContentModeScaleAspectFit;
     

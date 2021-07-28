@@ -66,8 +66,6 @@ static CGFloat const kPageControlHeight = 35;
     self.onboarding.delegate = self;
     
     [self.view addSubview:self.pageControl];
-    self.pageControl.pageIndicatorTintColor = [UIColor grayColor];
-    self.pageControl.currentPageIndicatorTintColor = [UIColor blackColor];
 
 }
 
@@ -130,6 +128,16 @@ static CGFloat const kPageControlHeight = 35;
        }
 }
 
+
+- (void)setCurrentPageIndicatorColor:(UIColor *)currentPageIndicatorColor {
+   self.pageControl.currentPageIndicatorTintColor = currentPageIndicatorColor;
+}
+
+- (void)setPageIndicatorColor:(UIColor *)pageIndicatorColor {
+    self.pageControl.pageIndicatorTintColor = pageIndicatorColor;
+}
+
+
 #pragma mark - KonboardingViewControllerDelegate
 
 - (void)setCurrentPage:(PageViewController *)currentPage {
@@ -148,7 +156,6 @@ static CGFloat const kPageControlHeight = 35;
 }
 
 - (void)close {
-    NSLog(@"dismis");
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
