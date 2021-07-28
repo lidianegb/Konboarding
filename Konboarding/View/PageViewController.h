@@ -17,9 +17,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property UILabel *titleLabel;
 @property UIImageView *imageView;
 @property UILabel *textLabel;
-@property UIButton *button;
 @property UIButton *buttonNext;
 @property UIButton *buttonPreview;
+@property UIButton *buttonClose;
 @property BOOL hasButtonAction;
 @property (nonatomic) UIColor *backgroundColor;
 @property (nonatomic) UIColor *titleColor;
@@ -27,6 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, weak) UIViewController<KonboardingViewControllerDelegate> *delegate;
 
 -(instancetype) initWithPage: (PageViewModel*) pageViewModel;
+-(void) updateLastPage;
 
 @end
 

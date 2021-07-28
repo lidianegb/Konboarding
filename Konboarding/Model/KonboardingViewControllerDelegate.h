@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)setNextPage:(UIViewController *)nextPage;
 - (void)setCurrentPage:(UIViewController *)currentPage;
 - (void)setPreviewPage:(UIViewController *)previewPage;
+- (void)close;
 
 @end
 

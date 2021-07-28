@@ -11,10 +11,6 @@
 
 static CGFloat const kPageControlHeight = 35;
 
-
-NSMutableArray<PageViewController *> *pagesViewController;
-PageViewModel *viewModel;
- 
 - (instancetype)initWithContent: (NSArray<PageViewController*>*)viewControllers {
  
     self = [super init];
@@ -35,6 +31,10 @@ PageViewModel *viewModel;
     
     [self setupOnboarding];
     
+    if (_currentPage == self.viewControllers.firstObject) {
+        [_currentPage.buttonPreview setHidden:YES];
+    }
+
 }
 
 - (void)viewWillLayoutSubviews {
@@ -77,7 +77,7 @@ PageViewModel *viewModel;
     if (viewController == [self.viewControllers lastObject]) {
         return nil;
     } else {
-        NSInteger nextPageIndex = [_viewControllers indexOfObject:viewController] + 1;
+        NSInteger nextPageIndex = [_viewControllers indexOfObject:(PageViewController*)viewController] + 1;
         return self.viewControllers[nextPageIndex];
     }
         
@@ -88,7 +88,7 @@ PageViewModel *viewModel;
     if (viewController == [self.viewControllers firstObject]) {
         return nil;
     } else {
-        NSInteger priorPageIndex = [self.viewControllers indexOfObject:viewController] - 1;
+        NSInteger priorPageIndex = [self.viewControllers indexOfObject:(PageViewController*)viewController] - 1;
         return self.viewControllers[priorPageIndex];
        
     }
@@ -101,30 +101,31 @@ PageViewModel *viewModel;
     }
     
     UIViewController* viewController = [pageViewController.viewControllers lastObject];
-    NSInteger newIndex = [self.viewControllers indexOfObject:viewController];
+    NSInteger newIndex = [self.viewControllers indexOfObject:(PageViewController*)viewController];
     [self.pageControl setCurrentPage:newIndex];
 
 }
 
 -(void) moveNextPage {
-    NSUInteger indexOfActualPage = [self.viewControllers indexOfObject:self.currentPage];
-    NSUInteger indexOfNextPage = indexOfActualPage + 1;
-
-       if (indexOfNextPage < self.viewControllers.count) {
+    NSUInteger indexOfNextPage = [self.viewControllers indexOfObject:self.currentPage] + 1;
+    
+       if (_currentPage != self.viewControllers.lastObject) {
            PageViewController* actualPage = self.viewControllers[indexOfNextPage];
            [self.onboarding setViewControllers:@[actualPage] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
-         
+           
+           [self setCurrentPage:actualPage];
            [self.pageControl setCurrentPage:indexOfNextPage];
-    
        }
 }
 
 -(void) movePreviewPage {
     NSUInteger indexOfPreviewPage = [self.viewControllers indexOfObject:self.currentPage] - 1;
- 
-       if (indexOfPreviewPage >= 0) {
-           [self.onboarding setViewControllers:@[self.viewControllers[indexOfPreviewPage]] direction:UIPageViewControllerNavigationDirectionReverse animated:YES completion:nil];
-          
+   
+       if (_currentPage != self.viewControllers.firstObject) {
+           PageViewController* actualPage = self.viewControllers[indexOfPreviewPage];
+           [self.onboarding setViewControllers:@[actualPage] direction:UIPageViewControllerNavigationDirectionReverse animated:YES completion:nil];
+           
+           [self setCurrentPage:actualPage];
            [self.pageControl setCurrentPage:indexOfPreviewPage];
        }
 }
@@ -136,12 +137,19 @@ PageViewModel *viewModel;
 }
 
 - (void)setNextPage:(PageViewController *)nextPage {
-    _upcomingPage = nextPage;
     [self moveNextPage];
+    if (_currentPage == self.viewControllers.lastObject) {
+        [_currentPage updateLastPage];
+    }
 }
 
 -(void) setPreviewPage:(UIViewController *)previewPage {
     [self movePreviewPage];
+}
+
+- (void)close {
+    NSLog(@"dismis");
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 

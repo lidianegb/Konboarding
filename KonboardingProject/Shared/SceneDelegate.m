@@ -39,8 +39,17 @@
     pageViewController2.titleColor = [UIColor blackColor];
     pageViewController2.textColor = [UIColor blackColor];
     
+    Page *page3 = [[Page alloc] initWithTitle:@"um titulo aqui" text:@"um texto aqui um texto aqui um texto aqui um texto aqui um texto aqui aqui um texto aqui um texto aqui aqui um texto aqui um texto aqui aqui um texto aqui um texto aqui aqui um texto aqui um texto aqui aqui um texto aqui um texto aqui" imageName:@"imageTest"];
     
-    KonboardingViewController * konboardingViewController = [[KonboardingViewController alloc] initWithContent:@[pageViewController1, pageViewController2]];
+    PageViewModel *pageViewModel3 = [[PageViewModel alloc] initWithPage:page3];
+    
+    PageViewController * pageViewController3 = [[PageViewController alloc] initWithPage:pageViewModel3];
+    pageViewController3.backgroundColor = [UIColor darkGrayColor];
+    pageViewController3.titleColor = [UIColor whiteColor];
+    pageViewController3.textColor = [UIColor whiteColor];
+    
+    
+    KonboardingViewController * konboardingViewController = [[KonboardingViewController alloc] initWithContent:@[pageViewController1, pageViewController2, pageViewController3]];
     
     
   

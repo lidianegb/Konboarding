@@ -72,6 +72,11 @@
     UIImage *previewImage = [UIImage systemImageNamed:@"arrow.left.circle.fill"];
     [self.buttonPreview setImage:previewImage forState:UIControlStateNormal];
     [self.buttonPreview addTarget:self action:@selector(preview) forControlEvents:UIControlEventTouchUpInside];
+    
+    self.buttonClose = [UIButton new];
+    UIImage *closeImage = [UIImage systemImageNamed:@"xmark.circle.fill"];
+    [self.buttonClose setImage:closeImage forState:UIControlStateNormal];
+    [self.buttonClose addTarget:self action:@selector(close) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void) next {
@@ -80,6 +85,18 @@
 
 - (void) preview {
     [_delegate setPreviewPage:self];
+}
+
+- (void) close {
+    [_delegate close];
+}
+
+-(void)updateLastPage {
+    UIImage *nextImage = [UIImage systemImageNamed:@"checkmark.circle.fill"];
+    [self.buttonNext setImage:nextImage forState:UIControlStateNormal];
+    [self.buttonNext addTarget:self action:@selector(close) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.buttonClose setHidden:YES];
 }
 
 - (void)setConstraints {
@@ -118,12 +135,12 @@
     [self.buttonNext.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor constant:-20].active = YES;
     [self.buttonNext.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor constant:-16].active = YES;
     
-}
-
-- (void)activateButton {
-   
-    [self.view addSubview:self.button];
-    [self.button setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self.view addSubview:self.buttonClose];
+    [self.buttonClose setTranslatesAutoresizingMaskIntoConstraints:NO];
+    
+    [self.buttonClose.topAnchor constraintEqualToAnchor:self.view.topAnchor constant:30].active = YES;
+    [self.buttonClose.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor constant:-16].active = YES;
+    
 }
 
 @end

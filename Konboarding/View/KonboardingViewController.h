@@ -20,7 +20,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSArray<PageViewController*> *viewControllers;
 @property (nonatomic, strong) UIPageControl *pageControl;
 @property (nonatomic, strong) PageViewController *currentPage;
-@property (nonatomic, strong) PageViewController *upcomingPage;
 
 -(instancetype)initWithContent: (NSArray<PageViewController*>*)viewControllers;
 -(void) moveNextPage;
