@@ -17,18 +17,33 @@
 
 - (void)scene:(UIScene *)scene willConnectToSession:(UISceneSession *)session options:(UISceneConnectionOptions *)connectionOptions {
     
-    KonboardingViewController * konboardingViewController = [KonboardingViewController new];
+   
     UIWindowScene * windowScene = [[UIWindowScene alloc] initWithSession:session connectionOptions:connectionOptions];
-//    
-//    Page *page = [[Page alloc] initWithTitle:@"um titulo aqui" text:@"um texto aqui um texto aqui um texto aqui um texto aqui um texto aqui aqui um texto aqui um texto aqui aqui um texto aqui um texto aqui aqui um texto aqui um texto aqui aqui um texto aqui um texto aqui aqui um texto aqui um texto aqui" imageName:@"imageTest"];
-//
-//    PageViewModel *pageViewModel = [[PageViewModel alloc] initWithPage:page];
-//  
-//    PageViewController * konboardingViewController = [[PageViewController alloc] initWithPage:pageViewModel];
-//   
-//    konboardingViewController.backgroundColor = [UIColor blueColor];
-//    konboardingViewController.titleColor = [UIColor whiteColor];
-//    konboardingViewController.textColor = [UIColor whiteColor];
+    
+    Page *page1 = [[Page alloc] initWithTitle:@"um titulo aqui" text:@"um texto aqui um texto aqui um texto aqui um texto aqui um texto aqui aqui um texto aqui um texto aqui aqui um texto aqui um texto aqui aqui um texto aqui um texto aqui aqui um texto aqui um texto aqui aqui um texto aqui um texto aqui" imageName:@"imageTest"];
+
+    PageViewModel *pageViewModel1 = [[PageViewModel alloc] initWithPage:page1];
+  
+    PageViewController * pageViewController1 = [[PageViewController alloc] initWithPage:pageViewModel1];
+    pageViewController1.backgroundColor = [UIColor blueColor];
+    pageViewController1.titleColor = [UIColor whiteColor];
+    pageViewController1.textColor = [UIColor whiteColor];
+    
+
+    Page *page2 = [[Page alloc] initWithTitle:@"um titulo aqui" text:@"um texto aqui um texto aqui um texto aqui um texto aqui um texto aqui aqui um texto aqui um texto aqui aqui um texto aqui um texto aqui aqui um texto aqui um texto aqui aqui um texto aqui um texto aqui aqui um texto aqui um texto aqui" imageName:@"imageTest"];
+    
+    PageViewModel *pageViewModel2 = [[PageViewModel alloc] initWithPage:page2];
+    
+    PageViewController * pageViewController2 = [[PageViewController alloc] initWithPage:pageViewModel2];
+    pageViewController2.backgroundColor = [UIColor whiteColor];
+    pageViewController2.titleColor = [UIColor blackColor];
+    pageViewController2.textColor = [UIColor blackColor];
+    
+    
+    KonboardingViewController * konboardingViewController = [[KonboardingViewController alloc] initWithContent:@[pageViewController1, pageViewController2]];
+    
+    
+  
     
     self.window = [[UIWindow alloc] initWithWindowScene:windowScene];
     self.window.rootViewController = konboardingViewController;

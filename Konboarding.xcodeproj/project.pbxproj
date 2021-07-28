@@ -27,6 +27,7 @@
 		0BE8656326AAF33800F69F2D /* KonboardingViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BE8656126AAF33800F69F2D /* KonboardingViewModel.m */; };
 		AF1FE7D426AEF41C00EA99D0 /* PageViewModel.h in Headers */ = {isa = PBXBuildFile; fileRef = AF1FE7D226AEF41C00EA99D0 /* PageViewModel.h */; };
 		AF1FE7D526AEF41C00EA99D0 /* PageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1FE7D326AEF41C00EA99D0 /* PageViewModel.m */; };
+		AF9863F326B0EF9700159A30 /* KonboardingViewControllerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = AF9863F226B0EF9700159A30 /* KonboardingViewControllerDelegate.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		0BE8656126AAF33800F69F2D /* KonboardingViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KonboardingViewModel.m; sourceTree = "<group>"; };
 		AF1FE7D226AEF41C00EA99D0 /* PageViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PageViewModel.h; sourceTree = "<group>"; };
 		AF1FE7D326AEF41C00EA99D0 /* PageViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PageViewModel.m; sourceTree = "<group>"; };
+		AF9863F226B0EF9700159A30 /* KonboardingViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KonboardingViewControllerDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +205,7 @@
 			children = (
 				0BE8655D26A9A75F00F69F2D /* Page.h */,
 				0BE8655B26A86D3200F69F2D /* Page.m */,
+				AF9863F226B0EF9700159A30 /* KonboardingViewControllerDelegate.h */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 				0BE8655926A8687B00F69F2D /* PageViewController.h in Headers */,
 				0BE8656226AAF33800F69F2D /* KonboardingViewModel.h in Headers */,
 				AF1FE7D426AEF41C00EA99D0 /* PageViewModel.h in Headers */,
+				AF9863F326B0EF9700159A30 /* KonboardingViewControllerDelegate.h in Headers */,
 				0BE8655426A8656F00F69F2D /* KonboardingViewController.h in Headers */,
 				0BE8655E26A9A75F00F69F2D /* Page.h in Headers */,
 				0BE8652826A85D6200F69F2D /* Konboarding.h in Headers */,

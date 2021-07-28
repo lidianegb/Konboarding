@@ -6,17 +6,17 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Page.h"
+#import "PageViewModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface KonboardingViewModel : NSObject
 
-@property NSMutableArray<Page*> *pages;
+@property NSMutableArray<PageViewModel*> *pages;
 
--(void) append: (Page *) page;
+-(void) append: (PageViewModel *) page;
 -(NSInteger) count;
--(Page *) pageAtIndex: (NSInteger) index;
+-(PageViewModel *) pageAtIndex: (NSInteger) index;
 
 @end
 

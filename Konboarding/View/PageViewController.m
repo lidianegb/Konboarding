@@ -26,6 +26,7 @@
 -(void) viewDidAppear:(BOOL)animated {
     [super viewDidAppear:YES];
     [self setConstraints];
+    [self.delegate setCurrentPage:self];
 }
 
 -(void) setBackgroundColor:(UIColor *)backgroundColor {
@@ -61,6 +62,24 @@
     UIImage *newImage = [UIImage imageNamed:page.imageName];
     self.imageView = [[UIImageView alloc] initWithImage:newImage];
     self.imageView.contentMode = UIViewContentModeScaleAspectFit;
+    
+    self.buttonNext = [UIButton new];
+    UIImage *nextImage = [UIImage systemImageNamed:@"arrow.right.circle.fill"];
+    [self.buttonNext setImage:nextImage forState:UIControlStateNormal];
+    [self.buttonNext addTarget:self action:@selector(next) forControlEvents:UIControlEventTouchUpInside];
+    
+    self.buttonPreview = [UIButton new];
+    UIImage *previewImage = [UIImage systemImageNamed:@"arrow.left.circle.fill"];
+    [self.buttonPreview setImage:previewImage forState:UIControlStateNormal];
+    [self.buttonPreview addTarget:self action:@selector(preview) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void) next {
+    [_delegate setNextPage:self];
+}
+
+- (void) preview {
+    [_delegate setPreviewPage:self];
 }
 
 - (void)setConstraints {
@@ -86,6 +105,19 @@
     [self.textLabel.topAnchor constraintEqualToAnchor:self.imageView.bottomAnchor constant:20].active = YES;
     [self.textLabel.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor constant:16].active = YES;
     [self.textLabel.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor constant:-16].active = YES;
+    
+    [self.view addSubview:self.buttonPreview];
+    [self.buttonPreview setTranslatesAutoresizingMaskIntoConstraints:NO];
+
+    [self.buttonPreview.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor constant:-20].active = YES;
+    [self.buttonPreview.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor constant:16].active = YES;
+    
+    [self.view addSubview:self.buttonNext];
+    [self.buttonNext setTranslatesAutoresizingMaskIntoConstraints:NO];
+    
+    [self.buttonNext.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor constant:-20].active = YES;
+    [self.buttonNext.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor constant:-16].active = YES;
+    
 }
 
 - (void)activateButton {

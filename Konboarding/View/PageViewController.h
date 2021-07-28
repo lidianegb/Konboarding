@@ -7,6 +7,8 @@
 
 #import <UIKit/UIKit.h>
 #import "PageViewModel.h"
+#import "KonboardingViewControllerDelegate.h"
+
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -16,10 +18,13 @@ NS_ASSUME_NONNULL_BEGIN
 @property UIImageView *imageView;
 @property UILabel *textLabel;
 @property UIButton *button;
+@property UIButton *buttonNext;
+@property UIButton *buttonPreview;
 @property BOOL hasButtonAction;
 @property (nonatomic) UIColor *backgroundColor;
 @property (nonatomic) UIColor *titleColor;
 @property (nonatomic) UIColor *textColor;
+@property (nonatomic, weak) UIViewController<KonboardingViewControllerDelegate> *delegate;
 
 -(instancetype) initWithPage: (PageViewModel*) pageViewModel;
 

@@ -12,12 +12,12 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        self.pages = [NSMutableArray new];
+        self.pages = [NSMutableArray<PageViewModel*> new];
     }
     return self;
 }
 
--(void) append:(Page *) page {
+-(void) append:(PageViewModel *) page {
     [self.pages addObject:page];
 }
 
@@ -25,7 +25,7 @@
     return [self.pages count];
 }
 
--(Page *) pageAtIndex: (NSInteger) index {
+-(PageViewModel *) pageAtIndex: (NSInteger) index {
     return self.pages[index];
 }
 
