@@ -103,7 +103,7 @@
 }
 
 -(void)updateLastPage {
-    UIImage *nextImage = [UIImage systemImageNamed:@"checkmark.circle.fill"];
+    UIImage *nextImage = [UIImage imageNamed:@"checkmark.circle.fill"];
     [self.buttonNext setImage:nextImage forState:UIControlStateNormal];
     [self.buttonNext addTarget:self action:@selector(close) forControlEvents:UIControlEventTouchUpInside];
     
