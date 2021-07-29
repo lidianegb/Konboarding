@@ -75,17 +75,17 @@
     self.imageView.contentMode = UIViewContentModeScaleAspectFit;
     
     self.buttonNext = [UIButton new];
-    UIImage *nextImage = [UIImage systemImageNamed:@"arrow.right.circle.fill"];
+    UIImage *nextImage = [UIImage imageNamed:@"arrow.right.circle.fill"];
     [self.buttonNext setImage:nextImage forState:UIControlStateNormal];
     [self.buttonNext addTarget:self action:@selector(next) forControlEvents:UIControlEventTouchUpInside];
     
     self.buttonPreview = [UIButton new];
-    UIImage *previewImage = [UIImage systemImageNamed:@"arrow.left.circle.fill"];
+    UIImage *previewImage = [UIImage imageNamed:@"arrow.left.circle.fill"];
     [self.buttonPreview setImage:previewImage forState:UIControlStateNormal];
     [self.buttonPreview addTarget:self action:@selector(preview) forControlEvents:UIControlEventTouchUpInside];
     
     self.buttonClose = [UIButton new];
-    UIImage *closeImage = [UIImage systemImageNamed:@"xmark.circle.fill"];
+    UIImage *closeImage = [UIImage imageNamed:@"xmark.circle.fill"];
     [self.buttonClose setImage:closeImage forState:UIControlStateNormal];
     [self.buttonClose addTarget:self action:@selector(close) forControlEvents:UIControlEventTouchUpInside];
 }
