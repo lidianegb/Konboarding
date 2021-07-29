@@ -7,16 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0BBCB92126AB0C2900AF68C0 /* Konboarding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BE8652326A85D6200F69F2D /* Konboarding.framework */; };
-		0BBCB92226AB0C2900AF68C0 /* Konboarding.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0BE8652326A85D6200F69F2D /* Konboarding.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0BE8652826A85D6200F69F2D /* Konboarding.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BE8652626A85D6200F69F2D /* Konboarding.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0BE8653626A860A200F69F2D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BE8653526A860A200F69F2D /* AppDelegate.m */; };
-		0BE8653926A860A200F69F2D /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BE8653826A860A200F69F2D /* SceneDelegate.m */; };
-		0BE8653C26A860A200F69F2D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BE8653B26A860A200F69F2D /* ViewController.m */; };
-		0BE8653F26A860A200F69F2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BE8653D26A860A200F69F2D /* Main.storyboard */; };
-		0BE8654126A860A400F69F2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BE8654026A860A400F69F2D /* Assets.xcassets */; };
-		0BE8654426A860A400F69F2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BE8654226A860A400F69F2D /* LaunchScreen.storyboard */; };
-		0BE8654726A860A400F69F2D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BE8654626A860A400F69F2D /* main.m */; };
 		0BE8655426A8656F00F69F2D /* KonboardingViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BE8655226A8656F00F69F2D /* KonboardingViewController.h */; };
 		0BE8655526A8656F00F69F2D /* KonboardingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BE8655326A8656F00F69F2D /* KonboardingViewController.m */; };
 		0BE8655926A8687B00F69F2D /* PageViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BE8655726A8687B00F69F2D /* PageViewController.h */; };
@@ -24,46 +15,10 @@
 		AF9863F326B0EF9700159A30 /* KonboardingViewControllerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = AF9863F226B0EF9700159A30 /* KonboardingViewControllerDelegate.h */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		0BBCB92326AB0C2900AF68C0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0BE8651A26A85D6200F69F2D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0BE8652226A85D6200F69F2D;
-			remoteInfo = Konboarding;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		0BBCB92526AB0C2900AF68C0 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				0BBCB92226AB0C2900AF68C0 /* Konboarding.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		0BE8652326A85D6200F69F2D /* Konboarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Konboarding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BE8652626A85D6200F69F2D /* Konboarding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Konboarding.h; sourceTree = "<group>"; };
 		0BE8652726A85D6200F69F2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0BE8653226A860A200F69F2D /* KonboardingProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KonboardingProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		0BE8653426A860A200F69F2D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		0BE8653526A860A200F69F2D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0BE8653726A860A200F69F2D /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		0BE8653826A860A200F69F2D /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		0BE8653A26A860A200F69F2D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		0BE8653B26A860A200F69F2D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		0BE8653E26A860A200F69F2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		0BE8654026A860A400F69F2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0BE8654326A860A400F69F2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		0BE8654526A860A400F69F2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0BE8654626A860A400F69F2D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0BE8655226A8656F00F69F2D /* KonboardingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KonboardingViewController.h; sourceTree = "<group>"; };
 		0BE8655326A8656F00F69F2D /* KonboardingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KonboardingViewController.m; sourceTree = "<group>"; };
 		0BE8655726A8687B00F69F2D /* PageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PageViewController.h; sourceTree = "<group>"; };
@@ -76,14 +31,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0BE8652F26A860A200F69F2D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0BBCB92126AB0C2900AF68C0 /* Konboarding.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,7 +48,6 @@
 			isa = PBXGroup;
 			children = (
 				0BE8652526A85D6200F69F2D /* Konboarding */,
-				0BE8653326A860A200F69F2D /* KonboardingProject */,
 				0BE8652426A85D6200F69F2D /* Products */,
 				0BBCB91B26AAFF0200AF68C0 /* Frameworks */,
 			);
@@ -111,7 +57,6 @@
 			isa = PBXGroup;
 			children = (
 				0BE8652326A85D6200F69F2D /* Konboarding.framework */,
-				0BE8653226A860A200F69F2D /* KonboardingProject.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -124,56 +69,6 @@
 				0BE8655026A863F000F69F2D /* View */,
 			);
 			path = Konboarding;
-			sourceTree = "<group>";
-		};
-		0BE8653326A860A200F69F2D /* KonboardingProject */ = {
-			isa = PBXGroup;
-			children = (
-				0BE8654E26A8616C00F69F2D /* Model */,
-				0BE8654D26A8615800F69F2D /* Shared */,
-				0BE8654C26A860DF00F69F2D /* View */,
-				0BE8654B26A860C500F69F2D /* Controller */,
-				0BE8654026A860A400F69F2D /* Assets.xcassets */,
-			);
-			path = KonboardingProject;
-			sourceTree = "<group>";
-		};
-		0BE8654B26A860C500F69F2D /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				0BE8653A26A860A200F69F2D /* ViewController.h */,
-				0BE8653B26A860A200F69F2D /* ViewController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		0BE8654C26A860DF00F69F2D /* View */ = {
-			isa = PBXGroup;
-			children = (
-				0BE8654226A860A400F69F2D /* LaunchScreen.storyboard */,
-				0BE8653D26A860A200F69F2D /* Main.storyboard */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		0BE8654D26A8615800F69F2D /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-				0BE8654626A860A400F69F2D /* main.m */,
-				0BE8654526A860A400F69F2D /* Info.plist */,
-				0BE8653426A860A200F69F2D /* AppDelegate.h */,
-				0BE8653526A860A200F69F2D /* AppDelegate.m */,
-				0BE8653726A860A200F69F2D /* SceneDelegate.h */,
-				0BE8653826A860A200F69F2D /* SceneDelegate.m */,
-			);
-			path = Shared;
-			sourceTree = "<group>";
-		};
-		0BE8654E26A8616C00F69F2D /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		0BE8655026A863F000F69F2D /* View */ = {
@@ -239,25 +134,6 @@
 			productReference = 0BE8652326A85D6200F69F2D /* Konboarding.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		0BE8653126A860A200F69F2D /* KonboardingProject */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0BE8654826A860A400F69F2D /* Build configuration list for PBXNativeTarget "KonboardingProject" */;
-			buildPhases = (
-				0BE8652E26A860A200F69F2D /* Sources */,
-				0BE8652F26A860A200F69F2D /* Frameworks */,
-				0BE8653026A860A200F69F2D /* Resources */,
-				0BBCB92526AB0C2900AF68C0 /* Embed Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0BBCB92426AB0C2900AF68C0 /* PBXTargetDependency */,
-			);
-			name = KonboardingProject;
-			productName = KonboardingProject;
-			productReference = 0BE8653226A860A200F69F2D /* KonboardingProject.app */;
-			productType = "com.apple.product-type.application";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -267,9 +143,6 @@
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
 					0BE8652226A85D6200F69F2D = {
-						CreatedOnToolsVersion = 12.5.1;
-					};
-					0BE8653126A860A200F69F2D = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
 				};
@@ -288,7 +161,6 @@
 			projectRoot = "";
 			targets = (
 				0BE8652226A85D6200F69F2D /* Konboarding */,
-				0BE8653126A860A200F69F2D /* KonboardingProject */,
 			);
 		};
 /* End PBXProject section */
@@ -298,16 +170,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0BE8653026A860A200F69F2D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0BE8654426A860A400F69F2D /* LaunchScreen.storyboard in Resources */,
-				0BE8654126A860A400F69F2D /* Assets.xcassets in Resources */,
-				0BE8653F26A860A200F69F2D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,45 +185,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0BE8652E26A860A200F69F2D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0BE8653C26A860A200F69F2D /* ViewController.m in Sources */,
-				0BE8653626A860A200F69F2D /* AppDelegate.m in Sources */,
-				0BE8654726A860A400F69F2D /* main.m in Sources */,
-				0BE8653926A860A200F69F2D /* SceneDelegate.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		0BBCB92426AB0C2900AF68C0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0BE8652226A85D6200F69F2D /* Konboarding */;
-			targetProxy = 0BBCB92326AB0C2900AF68C0 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		0BE8653D26A860A200F69F2D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0BE8653E26A860A200F69F2D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		0BE8654226A860A400F69F2D /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0BE8654326A860A400F69F2D /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		0BE8652926A85D6200F69F2D /* Debug */ = {
@@ -416,7 +240,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -472,7 +296,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -493,6 +317,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Konboarding/Shared/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -501,7 +326,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = developeracademy.Konboarding;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -516,6 +342,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Konboarding/Shared/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -524,43 +351,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = developeracademy.Konboarding;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		0BE8654926A860A400F69F2D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JCC32S9S9V;
-				INFOPLIST_FILE = KonboardingProject/Shared/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = developeracademy.KonboardingProject;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		0BE8654A26A860A400F69F2D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JCC32S9S9V;
-				INFOPLIST_FILE = KonboardingProject/Shared/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = developeracademy.KonboardingProject;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -581,15 +373,6 @@
 			buildConfigurations = (
 				0BE8652C26A85D6200F69F2D /* Debug */,
 				0BE8652D26A85D6200F69F2D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0BE8654826A860A400F69F2D /* Build configuration list for PBXNativeTarget "KonboardingProject" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0BE8654926A860A400F69F2D /* Debug */,
-				0BE8654A26A860A400F69F2D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
