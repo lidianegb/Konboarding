@@ -95,6 +95,14 @@ static CGFloat const kPageControlHeight = 35;
 -(void) pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray<UIViewController *> *)previousViewControllers transitionCompleted:(BOOL)completed {
     
     if (completed) {
+        if (_currentPage == self.viewControllers.lastObject) {
+            [_currentPage updateLastPage];
+        }
+        
+        NSUInteger indexOActualPage = [self.viewControllers indexOfObject:self.currentPage];
+       
+        [self.pageControl setCurrentPage:indexOActualPage];
+       
         return;
     }
     
