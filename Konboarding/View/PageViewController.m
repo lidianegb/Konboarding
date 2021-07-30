@@ -55,16 +55,16 @@
 -(void) setupSubViews: (NSString*) titleText : (NSString*) text : (NSString*) imageName {
     self.titleLabel = [UILabel new];
     self.titleLabel.text = titleText;
-    self.textLabel.numberOfLines = 0;
+    self.titleLabel.numberOfLines = 2;
     self.titleLabel.textAlignment = NSTextAlignmentCenter;
-    [self.titleLabel setFont: [UIFont boldSystemFontOfSize:(32)]];
+    [self.titleLabel setFont: [UIFont boldSystemFontOfSize:(24)]];
     self.titleLabel.textColor = [UIColor blackColor];
     
     
     
     self.textLabel = [UILabel new];
     self.textLabel.text = text;
-    self.textLabel.numberOfLines = 0;
+    self.textLabel.numberOfLines = 3;
     self.textLabel.textAlignment = NSTextAlignmentCenter;
     self.textLabel.font = [UIFont systemFontOfSize:(17)];
     self.textLabel.textColor = [UIColor blackColor];
@@ -115,17 +115,16 @@
     [self.view addSubview:self.titleLabel];
     [self.titleLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
    
-    [self.titleLabel.topAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.topAnchor constant:100].active = YES;
-    [self.titleLabel.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor constant:16].active = YES;
-    [self.titleLabel.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor constant:-16].active = YES;
 
     [self.view addSubview:self.imageView];
     [self.imageView setTranslatesAutoresizingMaskIntoConstraints:NO];
     
-    [self.imageView.topAnchor constraintEqualToAnchor:self.titleLabel.bottomAnchor constant:20].active = YES;
-    [self.imageView.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor constant:16].active = YES;
-    [self.imageView.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor constant:-16].active = YES;
+    [self.imageView.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor constant: -20].active = YES;
+    [self.imageView.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor].active = YES;
     
+    [self.titleLabel.bottomAnchor constraintEqualToAnchor:self.imageView.topAnchor constant:-20].active = YES;
+    [self.titleLabel.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor constant:16].active = YES;
+    [self.titleLabel.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor constant:-16].active = YES;
    
     [self.view addSubview:self.textLabel];
     [self.textLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
@@ -137,20 +136,26 @@
     [self.view addSubview:self.buttonPreview];
     [self.buttonPreview setTranslatesAutoresizingMaskIntoConstraints:NO];
 
-    [self.buttonPreview.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor constant:-20].active = YES;
-    [self.buttonPreview.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor constant:16].active = YES;
+    [self.buttonPreview.bottomAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.bottomAnchor constant:-20].active = YES;
+    [self.buttonPreview.leadingAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.leadingAnchor constant:16].active = YES;
+    [self.buttonPreview.widthAnchor constraintEqualToConstant:28].active = YES;
+    [self.buttonPreview.heightAnchor constraintEqualToConstant:28].active = YES;
     
     [self.view addSubview:self.buttonNext];
     [self.buttonNext setTranslatesAutoresizingMaskIntoConstraints:NO];
     
-    [self.buttonNext.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor constant:-20].active = YES;
-    [self.buttonNext.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor constant:-16].active = YES;
+    [self.buttonNext.bottomAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.bottomAnchor constant:-20].active = YES;
+    [self.buttonNext.trailingAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.trailingAnchor constant:-16].active = YES;
+    [self.buttonNext.widthAnchor constraintEqualToConstant:28].active = YES;
+    [self.buttonNext.heightAnchor constraintEqualToConstant:28].active = YES;
     
     [self.view addSubview:self.buttonClose];
     [self.buttonClose setTranslatesAutoresizingMaskIntoConstraints:NO];
     
-    [self.buttonClose.topAnchor constraintEqualToAnchor:self.view.topAnchor constant:30].active = YES;
-    [self.buttonClose.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor constant:-16].active = YES;
+    [self.buttonClose.topAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.topAnchor constant:20].active = YES;
+    [self.buttonClose.trailingAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.trailingAnchor constant:-16].active = YES;
+    [self.buttonClose.widthAnchor constraintEqualToConstant:28].active = YES;
+    [self.buttonClose.heightAnchor constraintEqualToConstant:28].active = YES;
     
 }
 

@@ -28,7 +28,7 @@ BOOL onboardingPresented = NO;
 -(void) presentOnboarding {
 
   
-    PageViewController * pageViewController1 = [[PageViewController alloc] initWithTitle:@"um titulo aqui" text:@"um texto aqui um texto aqui um texto aqui um texto aqui um texto aqui aqui um texto aqui um texto aqui aqui um texto aqui um texto aqui aqui um texto aqui" imageName:@"imageTest"];
+    PageViewController * pageViewController1 = [[PageViewController alloc] initWithTitle:@"um titulo aqui um titulo aqui" text:@"um texto aqui um texto aqui um texto aqui um texto aqui um texto aqui aqui um texto aqui um texto aqui aqui um texto aqui um texto aqui aqui um texto aqui" imageName:@"imageTest"];
     
     pageViewController1.backgroundColor = [UIColor blueColor];
     pageViewController1.titleColor = [UIColor whiteColor];
